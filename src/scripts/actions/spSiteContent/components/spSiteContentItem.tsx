@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Image, ImageFit } from 'office-ui-fabric-react/lib/Image';
 import { IconLink } from './../../common/iconLink';
 import { SpSiteContentConstants as constants } from './../constants/spSiteContentConstants';
+import  {ContextualMenuBasicExample} from  './spSiteContentItemMenu'
 
 interface SpSiteContentItemProps {
     item: ISiteContent,
@@ -35,6 +36,7 @@ export const SpSiteContentItem: React.StatelessComponent<SpSiteContentItemProps>
                 icon="Settings" linkTarget={props.linkTarget} />
             <IconLink title={`Permissions: ${props.item.title}`} href={props.item.permissionsPageUrl}
                 icon="SecurityGroup" linkTarget={props.linkTarget} />
+                <ContextualMenuBasicExample />
         </div>
     </div>
 );
